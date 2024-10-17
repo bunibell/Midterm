@@ -42,20 +42,24 @@ public class WASD_rb : MonoBehaviour
         //Make the cube change color when it hits  player 2 cube 
         if (collision.transform.tag == "Exit")
         {
-            //Find the color component of the item and change it to cyan
-            GetComponent<SpriteRenderer>().color = Color.green;
+            SceneManager.LoadScene(2);
         }
 
-        GameManager.instance.StartGame();
+        //GameManager.instance.StartGame();
 
         if (collision.transform.tag == "Exit2")
         {
-        SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
         if (collision.transform.tag == "Death")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
+        }
+
+        if (collision.transform.tag == "Trophy")
+        {
+            SceneManager.LoadScene("End");
         }
     }
 
