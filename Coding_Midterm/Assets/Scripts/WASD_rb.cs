@@ -34,5 +34,19 @@ public class WASD_rb : MonoBehaviour
         {
             rb.AddForce(Vector2.right * forceAmt);
         }
+
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Make the cube change color when it hits  player 2 cube 
+        if (collision.transform.tag == "Exit")
+        {
+            //Find the color component of the item and change it to cyan
+            GetComponent<SpriteRenderer>().color = Color.green;
+        }
+
+        GameManager.instance.StartGame();
+    }
+
+
 }
