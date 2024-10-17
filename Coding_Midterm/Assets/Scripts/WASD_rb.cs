@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WASD_rb : MonoBehaviour
 {
@@ -46,7 +47,16 @@ public class WASD_rb : MonoBehaviour
         }
 
         GameManager.instance.StartGame();
-    }
 
+        if (collision.transform.tag == "Exit2")
+        {
+        SceneManager.LoadScene(2);
+        }
+
+        if (collision.transform.tag == "Death")
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
 
 }

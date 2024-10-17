@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Exit
+  - Exit2
+  - Death
+  - Trophy
   layers:
   - Default
   - TransparentFX
